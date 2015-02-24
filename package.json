@@ -13,6 +13,7 @@
     "plugin",
     "postgres",
     "sql",
+    "sql-tag",
     "string",
     "strings",
     "tagged",
