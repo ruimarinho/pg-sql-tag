@@ -1,0 +1,44 @@
+{
+  "name": "pg-sql-tag",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seegno/pg-sql-tag.git"
+  },
+  "description": "A pg plugin for `sql-tag`",
+  "keywords": [
+    "es6",
+    "multiline",
+    "pg",
+    "plugin",
+    "postgres",
+    "sql",
+    "string",
+    "strings",
+    "tagged",
+    "template"
+  ],
+  "author": {
+    "name": "Rui Marinho",
+    "email": "rui.marinho@seegno.com",
+    "url": "https://github.com/ruimarinho"
+  },
+  "homepage": "https://github.com/seegno/pg-sql-tag",
+  "bugs": {
+    "url": "https://github.com/seegno/pg-sql-tag/issues"
+  },
+  "license": "MIT",
+  "scripts": {
+    "changelog": "./node_modules/.bin/github-changes -o seegno -r pg-sql-tag -a --only-pulls --use-commit-body --title 'Changelog' --date-format '/ YYYY-MM-DD'",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/*_test.js --require should --reporter spec"
+  },
+  "devDependencies": {
+    "github-changes": "0.0.16",
+    "mocha": "^2.1.0",
+    "should": "^5.0.1",
+    "thenify-all": "^1.6.0"
+  },
+  "peerDependencies": {
+    "pg": ">=3.0.0 < 5"
+  }
+}

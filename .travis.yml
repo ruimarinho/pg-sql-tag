@@ -1,0 +1,13 @@
+addons:
+  postgresql: "9.4"
+
+before_script:
+  - psql -c 'create database pg-sql-tag;' -U postgres
+
+language: node_js
+
+node_js:
+  - 0.12
+  - iojs
+
+sudo: false
