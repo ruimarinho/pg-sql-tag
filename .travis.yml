@@ -1,13 +1,6 @@
-addons:
-  postgresql: "9.4"
+language: bash
 
-before_script:
-  - psql -c 'CREATE DATABASE "pg-sql-tag";' -U postgres
+script:
+  - docker-compose -f docker-compose.test.yml up sut
 
-language: node_js
-
-node_js:
-  - 0.12
-  - iojs
-
-sudo: false
+services: docker
