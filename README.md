@@ -63,5 +63,5 @@ MIT
 [maintenance-image]: https://img.shields.io/maintenance/no/2016.svg?style=flat-square
 [npm-image]: https://img.shields.io/npm/v/pg-sql-tag.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/pg-sql-tag
-[travis-image]: https://img.shields.io/travis/seegno/pg-sql-tag/v0.0.1.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/seegno/pg-sql-tag/v0.0.2.svg?style=flat-square
 [travis-url]: https://travis-ci.org/seegno/pg-sql-tag
