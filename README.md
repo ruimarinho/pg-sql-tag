@@ -4,6 +4,9 @@ A [pg](https://github.com/brianc/node-postgres) plugin for [sql-tag](https://www
 
 ## Status
 
+This module has been deprecated in favour of [sql-tag@^1.0.0](https://github.com/seegno/sql-tag), which is now able to handle `pg` queries without requiring any modification to `pg.query`.
+
+[![maintenance status][maintenance-image]]()
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 
@@ -57,7 +60,8 @@ $ npm test
 
 MIT
 
-[npm-image]: https://img.shields.io/npm/v/pg-sql-tag.svg
+[maintenance-image]: https://img.shields.io/maintenance/no/2016.svg?style=flat-square
+[npm-image]: https://img.shields.io/npm/v/pg-sql-tag.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/pg-sql-tag
-[travis-image]: https://travis-ci.org/seegno/pg-sql-tag.svg
+[travis-image]: https://img.shields.io/travis/seegno/pg-sql-tag/v0.0.1.svg?style=flat-square
 [travis-url]: https://travis-ci.org/seegno/pg-sql-tag
