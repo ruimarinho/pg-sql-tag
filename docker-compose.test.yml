@@ -1,0 +1,11 @@
+postgres:
+  image: postgres:9.5
+  environment:
+    - POSTGRES_DB=pg-sql-tag
+
+sut:
+  image: seegno/node:5-test
+  links:
+    - postgres
+  volumes:
+    - .:/app

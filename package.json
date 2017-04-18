@@ -6,6 +6,7 @@
     "url": "https://github.com/seegno/pg-sql-tag.git"
   },
   "description": "A pg plugin for `sql-tag`",
+  "main": "dist/src/index.js",
   "keywords": [
     "es6",
     "multiline",
@@ -29,15 +30,32 @@
     "url": "https://github.com/seegno/pg-sql-tag/issues"
   },
   "license": "MIT",
+  "options": {
+    "mocha": "--compilers js:babel-register --recursive --require should"
+  },
   "scripts": {
     "changelog": "./node_modules/.bin/github-changes -o seegno -r pg-sql-tag -a --only-pulls --use-commit-body --title 'Changelog' --date-format '/ YYYY-MM-DD'",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha test/*_test.js --require should --reporter spec"
+    "lint": "eslint src test && jscs src test",
+    "prepublish": "npm run transpile",
+    "test": "NODE_ENV=test mocha $npm_package_options_mocha",
+    "transpile": "rm -rf dist/* && babel src --out-dir dist/src && babel test --out-dir dist/test && cp package.json dist/"
   },
   "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "babel-eslint": "^6.0.4",
+    "babel-preset-es2015-node4": "^2.1.0",
+    "babel-register": "^6.8.0",
+    "bluebird": "^3.3.5",
+    "eslint": "^2.9.0",
+    "eslint-config-seegno": "^4.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-sort-class-members": "^1.0.1",
     "github-changes": "0.0.16",
+    "jscs": "^3.0.3",
+    "jscs-config-seegno": "^2.0.0",
     "mocha": "^2.1.0",
-    "should": "^5.0.1",
-    "thenify-all": "^1.6.0"
+    "should": "^8.3.1",
+    "sql-tag": "github:seegno/sql-tag#bugfix/update-format-to-bound-parameters"
   },
   "peerDependencies": {
     "pg": ">=3.0.0 < 5"
