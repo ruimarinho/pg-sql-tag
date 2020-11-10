@@ -1,10 +1,15 @@
+
+---
+
+⚠️ This module has been deprecated in favour of [sql-tag@^1.0.0](https://github.com/seegno/sql-tag), which is now able to handle `pg` queries without requiring any modification to `pg.query`.
+
+---
+
 # pg-sql-tag
 
 A [pg](https://github.com/brianc/node-postgres) plugin for [sql-tag](https://www.npmjs.com/package/sql-tag), combinining the elegance of tagged sql query strings with the convenience and safety of `pg.query`.
 
 ## Status
-
-This module has been deprecated in favour of [sql-tag@^1.0.0](https://github.com/seegno/sql-tag), which is now able to handle `pg` queries without requiring any modification to `pg.query`.
 
 [![maintenance status][maintenance-image]]()
 [![npm version][npm-image]][npm-url]
